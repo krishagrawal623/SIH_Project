@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital India - Municipal Grievance Redressal System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Government Header with Logo -->
+    <header class="gov-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <div class="gov-logo">
+                            <div class="ashoka-chakra">
+                                <div class="chakra-wheel">
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                    <div class="spoke"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gov-text">
+                            <h1>भारत सरकार</h1>
+                            <h2>Government of India</h2>
+                            <h3>Digital India Initiative</h3>
+                        </div>
+                    </div>
+                    <div class="portal-title">
+                        <h1>Municipal Grievance Redressal System</h1>
+                        <p>नगर निगम शिकायत निवारण प्रणाली</p>
+                        <div class="slogan">"सुशासन के लिए डिजिटल इंडिया"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="official-info">
+                    <span><i class="fas fa-shield-alt"></i> Official Government Portal</span>
+                    <span><i class="fas fa-lock"></i> Secure & Encrypted</span>
+                    <span><i class="fas fa-clock"></i> 24x7 Service</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Government Navigation -->
+    <nav class="gov-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-tabs">
+                    <button class="gov-tab-btn active" onclick="showTab('report')">
+                        <i class="fas fa-file-alt"></i> 
+                        <span>File Grievance</span>
+                        <small>शिकायत दर्ज करें</small>
+                    </button>
+                    <button class="gov-tab-btn" onclick="showTab('dashboard')">
+                        <i class="fas fa-chart-bar"></i> 
+                        <span>Administrative Dashboard</span>
+                        <small>प्रशासनिक डैशबोर्ड</small>
+                    </button>
+                    <button class="gov-tab-btn" onclick="showTab('track')">
+                        <i class="fas fa-search"></i> 
+                        <span>Track Status</span>
+                        <small>स्थिति जांचें</small>
+                    </button>
+                </div>
+                <div class="nav-info">
+                    <span class="helpline">
+                        <i class="fas fa-phone"></i> Helpline: 1800-XXX-XXXX
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Report Issue Tab -->
+            <div id="report-tab" class="tab-content active">
+                <div class="gov-form-container">
+                    <div class="form-header">
+                        <div class="form-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="form-title">
+                            <h2>Municipal Grievance Registration Form</h2>
+                            <p>नगर निगम शिकायत पंजीकरण फॉर्म</p>
+                            <div class="form-subtitle">Please fill all mandatory fields marked with (*)</div>
+                        </div>
+                    </div>
+                    <form id="reportForm" enctype="multipart/form-data">
+                        <div class="form-section">
+                            <h3><i class="fas fa-list-alt"></i> Grievance Details</h3>
+                            <div class="form-group">
+                                <label for="problemType">Category of Grievance * <span class="hindi">(शिकायत की श्रेणी)</span></label>
+                                <select id="problemType" name="problemType" required>
+                                    <option value="">-- Select Category --</option>
+                                    <option value="road-damage">Road Infrastructure & Potholes</option>
+                                    <option value="water-leakage">Water Supply & Leakage</option>
+                                    <option value="garbage">Solid Waste Management</option>
+                                    <option value="street-light">Street Lighting</option>
+                                    <option value="drainage">Drainage & Sewerage</option>
+                                    <option value="parks">Parks & Public Spaces</option>
+                                    <option value="traffic">Traffic & Transportation</option>
+                                    <option value="other">Other Municipal Services</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priority Level * <span class="hindi">(प्राथमिकता स्तर)</span></label>
+                                <select id="priority" name="priority" required>
+                                    <option value="">-- Select Priority --</option>
+                                    <option value="high">High Priority - Emergency Response Required</option>
+                                    <option value="medium">Medium Priority - Standard Response Time</option>
+                                    <option value="low">Low Priority - Routine Maintenance</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Location Information</h3>
+
+                            <div class="form-group">
+                                <label for="location">Exact Location/Address * <span class="hindi">(सटीक स्थान/पता)</span></label>
+                                <input type="text" id="location" name="location" placeholder="Enter complete address with landmark" required>
+                                <button type="button" id="getLocationBtn" class="location-btn">
+                                    <i class="fas fa-crosshairs"></i> Use GPS Location
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="municipalCorp">Municipal Corporation * <span class="hindi">(नगर निगम)</span></label>
+                                <select id="municipalCorp" name="municipalCorp" required>
+                                    <option value="">-- Select Municipal Corporation --</option>
+                                    <option value="mumbai">Brihanmumbai Municipal Corporation (BMC)</option>
+                                    <option value="delhi">Municipal Corporation of Delhi (MCD)</option>
+                                    <option value="bangalore">Bruhat Bengaluru Mahanagara Palike (BBMP)</option>
+                                    <option value="chennai">Greater Chennai Corporation (GCC)</option>
+                                    <option value="kolkata">Kolkata Municipal Corporation (KMC)</option>
+                                    <option value="hyderabad">Greater Hyderabad Municipal Corporation (GHMC)</option>
+                                    <option value="pune">Pune Municipal Corporation (PMC)</option>
+                                    <option value="ahmedabad">Ahmedabad Municipal Corporation (AMC)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-edit"></i> Grievance Description</h3>
+                            <div class="form-group">
+                                <label for="description">Detailed Description * <span class="hindi">(विस्तृत विवरण)</span></label>
+                                <textarea id="description" name="description" placeholder="Please provide detailed description of the issue, including impact on public safety and convenience..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-camera"></i> Supporting Evidence</h3>
+                            <div class="form-group">
+                                <label for="photo">Upload Supporting Photographs * <span class="hindi">(सहायक तस्वीरें अपलोड करें)</span></label>
+                                <div class="file-upload">
+                                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                                    <label for="photo" class="file-upload-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Click to Upload or Drag & Drop</span>
+                                        <small>Maximum file size: 5MB | Supported formats: JPG, PNG</small>
+                                    </label>
+                                </div>
+                                <div id="photoPreview" class="photo-preview"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Contact Information</h3>
+                            <div class="form-group">
+                                <label for="contactInfo">Email Address <span class="hindi">(ईमेल पता)</span> <small>(Optional - for status updates)</small></label>
+                                <input type="email" id="contactInfo" name="contactInfo" placeholder="Enter your email address for receiving updates">
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <div class="declaration">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    I declare that the information provided is true and correct to the best of my knowledge.
+                                    <span class="hindi">मैं घोषणा करता/करती हूं कि दी गई जानकारी सही है।</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="gov-submit-btn">
+                                <i class="fas fa-file-export"></i> Submit Grievance
+                                <small>शिकायत दर्ज करें</small>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Municipal Dashboard Tab -->
+            <div id="dashboard-tab" class="tab-content">
+                <div class="dashboard-container">
+                    <h2><i class="fas fa-chart-line"></i> Municipal Corporation Dashboard</h2>
+                    
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalReports">0</div>
+                            <div class="stat-label">Total Reports</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="pendingReports">0</div>
+                            <div class="stat-label">Pending</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="inProgressReports">0</div>
+                            <div class="stat-label">In Progress</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="resolvedReports">0</div>
+                            <div class="stat-label">Resolved</div>
+                        </div>
+                    </div>
+
+                    <div class="filters">
+                        <select id="corpFilter">
+                            <option value="">All Municipal Corporations</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="kolkata">Kolkata</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="pune">Pune</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                        </select>
+                        <select id="statusFilter">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="resolved">Resolved</option>
+                        </select>
+                        <select id="priorityFilter">
+                            <option value="">All Priorities</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+
+                    <div class="reports-list" id="reportsList">
+                        <!-- Reports will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Track Issue Tab -->
+            <div id="track-tab" class="tab-content">
+                <div class="track-container">
+                    <h2><i class="fas fa-search"></i> Track Your Report</h2>
+                    <div class="track-form">
+                        <input type="text" id="trackingId" placeholder="Enter your report ID">
+                        <button onclick="trackReport()" class="track-btn">
+                            <i class="fas fa-search"></i> Track
+                        </button>
+                    </div>
+                    <div id="trackingResult" class="tracking-result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Digital India Initiative</h4>
+                    <p>Empowering citizens through technology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>Helpline: 1800-XXX-XXXX</p>
+                    <p>Email: support@digitalindia.gov.in</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p>Privacy Policy | Terms of Service</p>
+                    <p>Accessibility Statement</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Government of India. All rights reserved. | Designed & Developed under Digital India Initiative</p>
+                <p class="hindi">© 2025 भारत सरकार। सभी अधिकार सुरक्षित। | डिजिटल इंडिया पहल के तहत डिज़ाइन और विकसित</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
